@@ -1,0 +1,45 @@
+Tutorial 4 Help in R
+======================
+
+R has a good integration of help files and functions. There is also a large amount of help online, which will be discussed in the lectures. 
+
+In this tutorial we will test whether the variances of two variables are significantly different. This can be challenging when we do not know how to use the available functions. 
+
+First we will define two vectors:
+
+```{r}
+vector1 <- rnorm(100)
+vector2 <- vector1^2
+```
+
+We have used a new function rnorm(). This function samples from a standard normal distribution. In this case we obtained 100 samples.
+
+Open a browser window and google "variance test in R". You should find that you can use the function var.test()
+
+Try the following commands in the R prompt to get the help files for the var.test() function.
+
+```
+??"variance test"
+?var.test
+help(var.test)
+```
+
+With ?? we can use quotes to query the help files in R, and it is not necessary to know the name of the function.
+
+Inspect the output. In some operating systems typing "q" is required to exit the help file.
+
+Now we can find out which arguments are needed to run the var.test() function:
+
+```{r}
+args(var.test)
+```
+
+To see an example of how to use the function, in addition to some test data, use:
+
+```{r}
+example(var.test)
+```
+
+Now use the function on the vectors created above and determine whether the variances are significantly different or not.
+
+Keep this in hand for using any functions.

@@ -50,9 +50,9 @@ Programme
 
 - *Tea break*
 
-- 11.15 – 12.00	Tutorial 3: Numeric and string operations
+- 11.15 – 12.00	[Tutorial 3: Numeric and string operations](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial3)
 
-- 12.00 – 12.15	Tutorial 4: Help in R
+- 12.00 – 12.15	[Tutorial 4: Help in R](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial4)
 
 - 12.15 - 12.30 Solutions to exercises and questions
 
