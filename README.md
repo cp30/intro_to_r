@@ -46,7 +46,7 @@ Programme
 
 - 10.00 – 10.30	[Tutorial 1: Syntax and object types](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial1)
 
-- 10.30 – 11.00	Tutorial 2. Vectors, matrices, data frames, and indexing
+- 10.30 – 11.00	[Tutorial 2. Vectors, matrices, data frames, and indexing](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial2)
 
 -      		Tea break
 
