@@ -13,6 +13,26 @@ R is a powerful programming language for data analysis, with a wide array of app
 
 The workshop will be held in a computing lab in the Charles Perkins Centre at the University of Sydney. It will be run by Sebastian Duchene (sebastian .duchene@sydney.edu.au), with assistance from A/Prof Simon Ho (simon.ho@sydney.edu.au) and Frank Jia (fangzhi.jia@sydney.edu.au). The workshop will involve a series of lectures and tutorials. The tutorials will involve basic analyses and data manipulation using desktop PCs. We will be using free software that can be installed on PC, Mac, and UNIX platforms. 
 
+
+Required software
+-----------------
+
+- [R](http://www.r-project.org)
+
+- [RStudio](www.rstudio.com)
+
+
+Optional software
+-----------------
+
+- [TextWrangler](http://www.barebones.com/products/textwrangler/download.html) for MacOSX (optional).
+
+- [Notepad++](http://notepad-plus-plus.org) for Windows.
+
+- [Emacs Speaks Statistics](http://ess.r-project.org/index.php?Section=download) for any platform
+
+
+
 Programme
 ---------
 
@@ -20,7 +40,7 @@ Programme
 09.15 – 09.30	Lecture: Introduction to scientific computing and R
 09.30 – 09.45	Tutorial 0: Setting up R on different operating systems
 09.45 – 10.00	Lecture: Syntax and objects
-10.00 – 10.30	[Tutorial 1: Syntax and object types]()
+10.00 – 10.30	[Tutorial 1: Syntax and object types](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial1)
 10.30 – 11.00	Tutorial 2. Vectors, matrices, data frames, and indexing
       		Tea break
 11.15 – 11.30	Lecture: Basic operations in R
@@ -54,7 +74,19 @@ Crawley, M. J. (2012). The R book. John Wiley & Sons.
 Online resources
 ----------------
 
-[r-tutor](www.r-tutor.com)
-[statmethods](www.statmethods.net)
-[bioconductor](www.bioconductor.org)
+- [r-tutor](www.r-tutor.com)
 
+- [statmethods](www.statmethods.net)
+
+- [bioconductor](www.bioconductor.org)
+
+Note that there are many more resources, including some for very specific applications.
+
+Online forums
+-------------
+
+I strongly recommend using these two forums:
+
+- [stack overflow](http://stackoverflow.com/questions/tagged/r)
+
+- [cross validated](http://stats.stackexchange.com/questions/138/resources-for-learning-r)
