@@ -48,15 +48,15 @@ Programme
 
 - 10.30 – 11.00	[Tutorial 2. Vectors, matrices, data frames, and indexing](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial2)
 
--      		Tea break
+- *Tea break*
 
-- 11.15 – 11.30	Lecture: Basic operations in R
+- 11.15 – 12.00	Tutorial 3: Numeric and string operations
 
-- 11.30 – 12.00	Tutorial 3: Numeric and string operations
+- 12.00 – 12.15	Tutorial 4: Help in R
 
-- 12.00 – 12.30	Tutorial 4: Help in R 
+- 12.15 - 12.30 Solutions to exercises and questions
 
--      		Lunch break
+- *Lunch break*
 
 - 13.30 – 14.00	Lecture: Data in R
 
@@ -66,7 +66,7 @@ Programme
 
 - 14.45 – 15.15	Tutorial 6: Plotting data and graphical output
 
--      		Optional Tutorial 7: Custom graphics
+- *Optional Tutorial 7: Custom graphics*
 
 - 15.15 – 15.30	Lecture: Statistical tests and linear models in R
 
