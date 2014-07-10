@@ -1,0 +1,147 @@
+Tutorial 5 The Working directory and data in R
+==============================================
+
+Setting the working directory
+-----------------------------
+ 
+ In the first part of this tutorial we will learn how to set the working directory and explore its contents in R.
+ 
+First create a folder with the name *r_workshop_data* in your desktop and save the data file for the workshop. This is a dataset of the distribution of Chytridomycosis in Australia. We will not use the complete data set for this workshop, but the all the files and meta data are available [here](http://ecologicaldata.org/wiki/distribution-and-host-range-chytridiomycosis-australia).
+
+
+ 
+To set the working directory you can use the *Misc* dropdown menu and *Change working directory* in Unix-like machines, or with *File* in Windows.
+An other option is to specify the path with the following command:
+
+```
+setwd("path/to/your/file")
+``` 
+
+Note that in Windows the paths are specified with backslash (\), but R always uses the forward slash (/).
+
+Set the working directory to the *r_workshop_data* folder.
+
+We should make sure that we specified the working directory correctly. To get the working directory in R use the following command:
+
+```{r}
+getwd()
+```
+
+Check the contents of the directory and make sure that it contains the data file.
+
+```{r}
+dir()
+```
+
+Reading and writing text data
+-----------------------------
+
+From this point in the workshop we will use the data files that we saved in the *r_workshop_data* folder.
+
+Read the data as a text file with the command bellow.
+
+```{r}
+data_text <- readLines("Chytridomycosis_short.csv")
+```
+This command reads the data as a vector, where each line in the file is an item in the vector. We will confirm the class of the object, and then determine its length with the length() function.
+
+```{r}
+class(data_text)
+length(data_text)
+```
+
+Open the file in a text editor (I recommend [TextWrangler](http://www.barebones.com/products/textwrangler/) or [NotePad++](http://notepad-plus-plus.org/download/v6.5.html), but any other is sufficient in this case).
+
+You can also open the file in Excel or any spreadsheet program, which should read it as a regular table of data.
+
+**Individual exercise: subset the vector to print on the screen the first ten items of data_text. You can use indexing as shown in tutorial 2.2. or search the help for the function head(). 
+After inspecting the first six lines, create a vector called *data_text_10* for these first ten items.
+As an optional exercise, print on the screen the last ten items of the data set. Hint: Remember the length() function that we used earlier**
+
+Your code for the exercise should look something like this:
+
+```{r}
+data_text_10 <- data_text[1:10]
+```
+
+We will now save the first ten lines in a file with the function writeLines(). This function takes several arguments. Use the help file for more information on how to use the function. The basics are explained bellow:
+
+```{r}
+writeLines(text = data_text_10, con = "Chytridomycosis_10.csv")
+# we could also use writeLines(data_text_10, "Chytridomycosis_10.csv")
+```
+
+Check the *Chytridomycosis_10.csv* file in a text editor or spreadsheet program. The format should be identical to that of the original file. 
+
+Reading and writing tables
+--------------------------
+
+Reading data as text is only useful for text manipulations. For data analysis it is necessary to read the data like a spreadsheet and work with rows and columns. In R it is most convenient to have the data as data frames or matrices. To do this we can use the read.table() function.
+
+Open the help file for the read.table function. It has many possible arguments with default values. In some cases it is not necessary to change the defaults, but sometimes this can cause problems, so it is useful to become familiar with this function. 
+
+Load the data file with the following command:
+
+```{r}
+data_table <- read.table(file = "Chytridomycosis_short.csv", sep = ",", head = T)
+```
+
+We specified sep="," because the default is tab delimited text, and we want R to use the commas to separate the values. Note that this is similar to using the function read.csv(), as shown in the help file for read.table().
+
+The argument head = T is used to specify that the first row of the file is the names of the columns, which is useful if we want to treat our data like a data.frame object.
+
+It is very important to make sure that the data are read correctly. A very useful function is str(), which prints the structure of objects in R:
+
+```{r}
+str(data_table)
+```
+As we can see, the data were read as a data.frame object, so we can use the indexing and column names like we did in tutorial 2.
+
+We can also inspect the first six rows of the table:
+
+```{r}
+head(data_table)
+````
+
+To find the number of rows and columns we can use the following commands:
+
+```{r}
+dim(data_table) # Prints the number of rows, followed by the number of columns.
+nrow(data_table) # Prints the number of rows only.
+ncol(data_table) # Prints the number of columns only.
+```
+**Individual exercise: Obtain some summary statistics from the columns in data_table. Try using the summary() function on the complete data frame and on one column each time**
+
+
+We can write tables in many formats from R. The most simple method is to save the data as tab delimited or comma separated values, instead of xlsx or other data formats (these require some additional R packages).
+
+We will save the first ten lines of data_table in csv and txt (tab delimited text) by indexing the first ten rows. Open the help file for write.table() for more details on the arguments of the function.
+
+```{r}
+write.table(x = data_table[1:10, ], file = "data_table_10.csv", sep = ",", row.names = F)
+write.table(x = data_table[1:10, ], file = "data_table_10.txt", sep = "\t", row.names = F)
+```
+
+Optional exercise: Reading data from the internet
+-------------------------------------------------
+
+R has many capabilities to handle data, including maps, phylogenetic trees, and other more complicated structures. We have loaded data from our local machine, but it is also possible to obtain data from the internet, such as a file in Dropbox or a remote server. We will try this by downloading some data from the github repository for the workshop.
+
+Open a web browser and type in the following address:
+
+```
+```
+
+
+
+**Individual exercises: We used the argument row.names = F, try using T (the default) and look at the output files. 
+Change argument for the col.names and look at the output files**
+
+**Class exercise: Use the order function to sort the rows of data_table from the latest to the most recent year of collection of the sample. Write this table into a file called data_table_sorted.csv**
+
+**Class exercise: Use the operation ==  to obtain a data frame only with samples from the year 1998. Save this to a file called data_table_1998.csv**
+
+
+
+
+
