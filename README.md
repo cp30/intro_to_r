@@ -25,11 +25,11 @@ Required software
 Optional software
 -----------------
 
-- [TextWrangler](http://www.barebones.com/products/textwrangler/download.html) for MacOSX (optional).
+- [TextWrangler](http://www.barebones.com/products/textwrangler/download.html) for MacOSX.
 
 - [Notepad++](http://notepad-plus-plus.org) for Windows.
 
-- [Emacs Speaks Statistics](http://ess.r-project.org/index.php?Section=download) for any platform
+- [Emacs Speaks Statistics](http://ess.r-project.org/index.php?Section=download) for any platform.
 
 
 
@@ -47,6 +47,8 @@ Programme
 - 10.00 – 10.30	[Tutorial 1: Syntax and object types](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial1)
 
 - 10.30 – 11.00	[Tutorial 2. Vectors, matrices, data frames, and indexing](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial2)
+
+- *Optional Tutorial: Lists*
 
 - *Tea break*
 
