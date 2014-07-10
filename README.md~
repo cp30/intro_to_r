@@ -4,7 +4,6 @@ Introduction to R
 [Sebastian Duchene](sebastian.duchene@sydney.edu.au)  
 [Molecular Ecology, Evolution and Phylogenetics Laboratory](http://sydney.edu.au/science/biology/meep/people/sebastianduchene.shtml)  
 School of Biological Sciences  
-
 University of Sydney
 
 [Genetics Society of Australasia Conference 2014](http://www.genetics.org.au/annual-meeting-2014/workshops/)
