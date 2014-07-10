@@ -68,7 +68,7 @@ Programme
 
 - 14.45 – 15.15	[Tutorial 6: Plotting data and graphical output](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial6)
 
-- *Optional Tutorial: Custom graphics*
+- [*Optional Tutorial: Custom graphics*](https://github.com/sebastianduchene/intro_to_r/tree/master/opt_tutorial_custom_plots)
 
 - 15.15 – 15.30	Lecture: Statistical tests and linear models in R
 
