@@ -43,14 +43,20 @@ dir()
 ```
 ##  [1] "Chytridiomycosis_data_1956_2007.txt"
 ##  [2] "Chytridomycosis_10.csv"             
-##  [3] "Chytridomycosis_short.csv"          
-##  [4] "data_table_10.csv"                  
-##  [5] "data_table_10.txt"                  
-##  [6] "sim_seqs.fasta"                     
-##  [7] "sim_tree.tre"                       
-##  [8] "tutorial5.rmd"                      
-##  [9] "tutorial5.rmd~"                     
-## [10] "webtable.csv"
+##  [3] "Chytridomycosis_10.xlsx"            
+##  [4] "Chytridomycosis_short.csv"          
+##  [5] "data_table_10.csv"                  
+##  [6] "data_table_10.txt"                  
+##  [7] "README.md"                          
+##  [8] "README.md~"                         
+##  [9] "sim_seqs.fasta"                     
+## [10] "sim_tree.tre"                       
+## [11] "tut5_seqs.fasta"                    
+## [12] "tut5_tree.tre"                      
+## [13] "tutorial5.rmd"                      
+## [14] "tutorial5.rmd~"                     
+## [15] "web_data.csv"                       
+## [16] "webtable.csv"
 ```
 
 
@@ -252,6 +258,46 @@ Change argument for the col.names and look at the output files**
 **Class exercise: Use the operation ==  to obtain a data frame only with samples from the year 1998. Save this to a file called data_table_1998.csv**
 
 
+Data from Excel
+---------------
+
+R can read data from Excel and other spreadsheet programs. We need to download and install additional tools for this purpose. 
+In this example we will use the package gdata. Download and install it with this command:
+
+
+```r
+install.packages("gdata")
+```
+
+```
+## --- Please select a CRAN mirror for use in this session ---
+## 
+## The downloaded binary packages are in
+## 	/var/folders/17/lpg5qqgx4237271yxywq5_m40000gn/T//RtmpE7WzKz/downloaded_packages
+```
+
+
+We need to load the package to make the functions available. Use the library() function:
+
+
+```r
+library(gdata)
+```
+
+
+The data file 'Chytridomycosis_10.xlsx' is the same data that we used in a previous example, but it is in Excel format. We can read it as follows:
+
+
+```r
+data_excel <- read.xls("Chytridomycosis_10.xlsx", sheet = 1)
+```
+
+Note that we use the argument sheet = 1 to specify that it should load the first sheet. 
+
+An other package that can handle spreadsheets is [XLConnect](http://www.r-bloggers.com/xlconnect-0-2-0/). It is more diffult to use, but it has some more advanced functions.
+
+
+
 Optional exercise: Reading data from the internet
 -------------------------------------------------
 
@@ -288,15 +334,20 @@ dir()
 ```
 ##  [1] "Chytridiomycosis_data_1956_2007.txt"
 ##  [2] "Chytridomycosis_10.csv"             
-##  [3] "Chytridomycosis_short.csv"          
-##  [4] "data_table_10.csv"                  
-##  [5] "data_table_10.txt"                  
-##  [6] "sim_seqs.fasta"                     
-##  [7] "sim_tree.tre"                       
-##  [8] "tutorial5.rmd"                      
-##  [9] "tutorial5.rmd~"                     
-## [10] "web_data.csv"                       
-## [11] "webtable.csv"
+##  [3] "Chytridomycosis_10.xlsx"            
+##  [4] "Chytridomycosis_short.csv"          
+##  [5] "data_table_10.csv"                  
+##  [6] "data_table_10.txt"                  
+##  [7] "README.md"                          
+##  [8] "README.md~"                         
+##  [9] "sim_seqs.fasta"                     
+## [10] "sim_tree.tre"                       
+## [11] "tut5_seqs.fasta"                    
+## [12] "tut5_tree.tre"                      
+## [13] "tutorial5.rmd"                      
+## [14] "tutorial5.rmd~"                     
+## [15] "web_data.csv"                       
+## [16] "webtable.csv"
 ```
 
 

@@ -130,6 +130,33 @@ Change argument for the col.names and look at the output files**
 **Class exercise: Use the operation ==  to obtain a data frame only with samples from the year 1998. Save this to a file called data_table_1998.csv**
 
 
+Data from Excel
+---------------
+
+R can read data from Excel and other spreadsheet programs. We need to download and install additional tools for this purpose. 
+In this example we will use the package gdata. Download and install it with this command:
+
+```{r}
+install.packages("gdata")
+```
+
+We need to load the package to make the functions available. Use the library() function:
+
+```{r}
+library(gdata)
+```
+
+The data file 'Chytridomycosis_10.xlsx' is the same data that we used in a previous example, but it is in Excel format. We can read it as follows:
+
+```{r}
+data_excel <- read.xls("Chytridomycosis_10.xlsx", sheet = 1)
+```
+Note that we use the argument sheet = 1 to specify that it should load the first sheet. 
+
+An other package that can handle spreadsheets is [XLConnect](http://www.r-bloggers.com/xlconnect-0-2-0/). It is more diffult to use, but it has some more advanced functions.
+
+
+
 Optional exercise: Reading data from the internet
 -------------------------------------------------
 
