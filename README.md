@@ -48,7 +48,7 @@ Programme
 
 - 10.30 – 11.00	[Tutorial 2. Vectors, matrices, data frames, and indexing](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial2)
 
-- [*Optional Tutorial: Lists*](https://github.com/sebastianduchene/intro_to_r/tree/master/opt_tutorial_lists)
+  - [*Optional Tutorial: Lists*](https://github.com/sebastianduchene/intro_to_r/tree/master/opt_tutorial_lists)
 
 - *Tea break*
 
