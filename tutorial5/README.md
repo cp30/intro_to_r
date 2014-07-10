@@ -270,7 +270,6 @@ install.packages("gdata")
 ```
 
 ```
-## --- Please select a CRAN mirror for use in this session ---
 ## 
 ## The downloaded binary packages are in
 ## 	/var/folders/17/lpg5qqgx4237271yxywq5_m40000gn/T//RtmpE7WzKz/downloaded_packages
@@ -393,6 +392,12 @@ my_seqs <- read.dna("tut5_seqs.fasta", format = "fasta")
 ```
 
 
-Use summary, str, and class to inspect these data.
+Use summary, str, and class to inspect these data. Try the following code:
+
+```
+plot(my_tree)
+```
+
+In the next section of the workshop we will learn more about plotting.
 
 
