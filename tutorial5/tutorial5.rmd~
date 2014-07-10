@@ -130,6 +130,39 @@ Change argument for the col.names and look at the output files**
 **Class exercise: Use the operation ==  to obtain a data frame only with samples from the year 1998. Save this to a file called data_table_1998.csv**
 
 
+Optional exercise: Reading data from the internet
+-------------------------------------------------
+
+R has many capabilities to handle data, including maps, phylogenetic trees, and other more complicated structures. We have loaded data from our local machine, but it is also possible to obtain data from the internet, such as a file in Dropbox or a remote server. We will try this by downloading some data from the github repository for the workshop.
+
+Open a web browser and type in the following address:
+
+```
+https://github.com/sebastianduchene/intro_to_r/blob/master/tutorial5/Chytridomycosis_short.csv
+```
+
+You will note that this is one of the data sets that we have been using. It is stored in a remote server in GitHub. Click the link labeled 'Raw' to view the raw data in your browser. The address should be something like this:
+
+```
+https://raw.githubusercontent.com/sebastianduchene/intro_to_r/master/tutorial5/Chytridomycosis_short.csv
+```
+
+This is the URL for the raw data. We can read it directly into R with the following code. If you are using a windows machine you may not need to use the method=curl argument. The argument 'destfile' is used to specify the name of the file that we have downloaded. 
+
+```{r}
+web_table <- download.file("https://raw.githubusercontent.com/sebastianduchene/intro_to_r/master/tutorial5/Chytridomycosis_short.csv", method = "curl", destfile = "web_data.csv")
+```
+
+Check the working directory to see that the web_data.csv file was created. You can do this from R using the dir() function:
+
+```{r}
+dir()
+```
+
+We can use this file for any analyses like we did in the previous example. 
+
+
+
 
 
 
