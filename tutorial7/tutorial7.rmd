@@ -1,0 +1,79 @@
+Tutorial 7. Statistical tests and linear models in R
+====================================================
+
+In this tutorial we will learn how to specify statistical models and perform some statistical tests. We will use the stat_modelling.csv data set.
+
+First load the data set:
+```{r}
+stat.modelling <- read.table("stat_modelling.csv", sep = ",", head = T)
+```
+
+Check that the data are loaded correctly:
+```{r}
+class(stat.modelling)
+str(stat.modelling)
+```
+
+With data frames the plot function plots a pairs plot, which can be useful to inspect for possible association between variables:
+
+```{r}
+plot(stat.modelling)
+```
+
+We will test whether the measurements of *y* for levels A and B of variable *q* are significantly different. This could be tested by specifying a linear model for an ANOVA or a t-test. We can inspect these data by specifying a formula object in the boxplot funcion:
+
+
+```{r}
+boxplot(stat.modelling$y ~ stat.modelling$q)
+```
+
+
+It seems that the variance is different for A and B. This can be tested with the var.test function as follows:
+
+```{r}
+# note that we need some indexing to select factors A and B because var.test uses two vectors:
+y.A <- stat.modelling$y[stat.modelling$q=="A"]
+y.B <- stat.modelling$y[stat.modelling$q=="B"]
+var.test(y.A, y.B)
+```
+
+The variances are not equal, so it is more appropriate to use a t-test for unequal variances:
+
+```{r}
+t.test(y.A, y.B, equal.var = F)
+```
+
+We could confim this with an ANOVA
+
+This requires specifying a formula in the linear model, which is used in the anova function:
+
+```{r}
+model.ab <- lm(stat.modelling$y ~ stat.modelling$q)
+anova(model.ab)
+```
+
+
+Variables *x* and *y* are continuous, and there appears to be a linear relationship between them. We can conduct a linear regression as follows:
+```{r}
+model.xy <- lm(stat.modelling$y ~ stat.modelling$x)
+```
+In this case we use the summary function to obtain the regression coefficients and their significance:
+
+```{r}
+summary(model.xy)
+```
+
+We are mostly interested in the output under *Coefficients*. The column *Estimates* is the estimated coefficients. In this case it is the intercept and the slope (*stat.modelling$x*). The next columns are the standard errors in the coefficients, the *t* statistic, and the *P* value. The null hypothesis is that the coefficients are not different from 0. The R squared and other statistics are also displayed.
+
+The regression model (model.xy) can also be used for plotting. Use the following code for some diagnostic plots:
+
+```
+plot(model.xy)
+```
+
+An other use of the linear regression model object to showing the regression line:
+
+```{r}
+plot(stat.modelling$x, stat.modelling$y)
+abline(model.xy)
+```
