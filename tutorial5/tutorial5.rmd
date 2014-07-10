@@ -220,6 +220,12 @@ my_tree <- read.tree("tut5_tree.tre")
 my_seqs <- read.dna("tut5_seqs.fasta", format = "fasta")
 ```
 
-Use summary, str, and class to inspect these data.
+Use summary, str, and class to inspect these data. Try the following code:
+
+```
+plot(my_tree)
+```
+
+In the next section of the workshop we will learn more about plotting.
 
 

@@ -1,0 +1,96 @@
+install.packages("phangorn")
+install. packages("phangorn")
+install.packages("phangorn")
+library(phangorn)
+library(ape)
+y <- 1:100
+x <- 1:100
+plot(log(x), log(y))
+plot(log(x), y)
+x=1/y
+plot(log(x), log(y))
+plot(log(x), y)
+inv.fun <- function(x){#
+	1/x#
+}
+plot(inv.fun)
+?plot
+plot(inv.fun, xlab="", ylab="")
+library(ape)
+inv.fun <- function(x){1/x}
+plot(inv.fun)
+inv.fun2 <- function(x){5/x}
+plot(inv.fun2)
+plot(inv.fun)
+plot(inv.fun2, add=T)
+inv.fun3 <- function(x){10/x}
+plot(inv.fun3)
+plot(inv.fun)
+plot(inv.fun2, add=T)
+plot(inv.fun3, add=T)
+inv.fun3 <- function(x){0.5/x}
+plot(inv.fun3, add=T)
+library(phangorn)
+f <- function(x){1/x}
+plot(f)
+?pot
+?plot
+plot(f, ann=F)
+plot(f, ann=F, width=2)
+plot(f, ann=F, lwd=2)
+plot(f, ann=F, lwd=2, ylim=c(0, 10000))
+plot(f, ann=F, lwd=2, ylim=c(0, 1000))
+plot(f, ann=F, lwd=2, ylim=c(0, 100))
+plot(f, ann=F, lwd=2, xlim=c(-1, 100))
+plot(f, ann=F, lwd=2, xlim=c(-0.1, 100))
+plot(f, ann=F, lwd=2, xlim=c(-0.1, 10))
+x <- file.choose()
+x
+choose.files
+choose.files()
+x <- file.choose(T)
+file.choose()
+source("~/expe.prompt.R")
+dir()
+cat("our.R.prommpt.txt")
+readLines("our.R.prommpt.txt")
+readLines("out.txt")
+ls()
+clear()
+a <- 5
+rtree(a)
+library(ape)
+rtree(a)
+setwd()
+dir()
+readLines("out.R.txt")
+readLines("example_file.txt")
+setwd("~/Dropbox/PostersTalks/sobsRworkshop/tutorial7/")
+dir()
+stat.modelling <- read.table("stat_modelling.csv", head = T, sep = ",")
+head(stat.modelling)
+str(stat.modelling)
+col()
+colours()
+colours(1)
+colours()[1]
+grep("red", colours)
+grep("red", colours())
+grep("red", colours(), value = T)
+plot(stat.modelling$x, stat.modelling$y)
+abline(a = 0, b = 1)
+?plotmath
+demo(plotmath)
+library(ggplot2)
+ggplot(rnorm(100))
+?ggplot
+ggplot(stat.modelling)
+ggplot(stat.modelling, aes(x = x, y = x))
+ggplot(stat.modelling, aes(x = stat.modelling$x, y = stat.modelling$x))
+ggplot(stat.modelling, aes(x = stat.modelling$x, y = stat.modelling$x)) + geom.point()
+ggplot(stat.modelling, aes(x = stat.modelling$x, y = stat.modelling$x)) + geom_point()
+ggplot(stat.modelling, aes(x = stat.modelling$x, y = stat.modelling$y)) + geom_point()
+ggplot(stat.modelling, aes(x = x, y = y)) + geom_point()
+ggplot(stat.modelling, aes(x = x, y = y), ylab = "sgreg") + geom_point()
+ggplot(stat.modelling) + geom_point()
+ggplot(stat.modelling, aes(x, y), ylab = "sgreg") + geom_point()
