@@ -38,11 +38,11 @@ Programme
 
 - 09.00 – 09.15	Arrival and set-up
 
-- 09.15 – 09.30	[Lecture: Introduction to scientific computing and R](https://github.com/sebastianduchene/intro_to_r/blob/master/lectures/lecture1.pdf)
+- 09.15 – 09.30	[Lecture: Introduction to scientific computing and R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture1.pdf)
 
 - 09.30 – 09.45	Tutorial 0: Setting up R on different operating systems
 
-- 09.45 – 10.00	[Lecture: Syntax and objects](https://github.com/sebastianduchene/intro_to_r/blob/master/lectures/lecture2.pdf)
+- 09.45 – 10.00	[Lecture: Syntax and objects](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture2.pdf)
 
 - 10.00 – 10.30	[Tutorial 1: Syntax and object types](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial1)
 
@@ -60,17 +60,17 @@ Programme
 
 - *Lunch break*
 
-- 13.30 – 14.00	[Lecture: Data in R](https://github.com/sebastianduchene/intro_to_r/blob/master/lectures/lecture3.pdf)
+- 13.30 – 14.00	[Lecture: Data in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture3.pdf)
 
 - 14.00 – 14.30	[Tutorial 5: Reading and writing data](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial5)
 
-- 14.30 – 14.45	[Lecture: Graphics in R](https://github.com/sebastianduchene/intro_to_r/blob/master/lectures/lecture4.pdf)
+- 14.30 – 14.45	[Lecture: Graphics in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture4.pdf)
 
 - 14.45 – 15.15	[Tutorial 6: Plotting data and graphical output](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial6)
 
   - [*Optional Tutorial: Custom graphics*](https://github.com/sebastianduchene/intro_to_r/tree/master/opt_tutorial_custom_plots)
 
-- 15.15 – 15.30	[Lecture: Statistical tests and linear models in R](https://github.com/sebastianduchene/intro_to_r/blob/master/lectures/lecture5.pdf)
+- 15.15 – 15.30	[Lecture: Statistical tests and linear models in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture5.pdf)
 
 - 15.30 – 16.00	[Tutorial 7: Statistical tests and linear models](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial7)
 
