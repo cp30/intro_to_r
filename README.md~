@@ -102,12 +102,15 @@ Online resources
 
 - [bioconductor](www.bioconductor.org)
 
-Note that there are many more resources, including some for very specific applications.
+- [Rentrez](https://github.com/ropensci/rentrez). This is a great package to access internet data bases, such as NCBI.
+
+- [Sequence data in R](http://www.bioconductor.org/help/workflows/high-throughput-sequencing/). This is a tutorial and some resources to process FASTQ files and NGS output data.
+
 
 Online forums
 -------------
 
-I strongly recommend using these two forums:
+There are many good forums to find answers for specific R applications. I recommend the following for statistics and programming:
 
 - [stack overflow](http://stackoverflow.com/questions/tagged/r)
 

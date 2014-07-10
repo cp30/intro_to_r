@@ -62,7 +62,7 @@ Programme
 
 - 13.30 – 14.00	Lecture: Data in R
 
-- 14.00 – 14.30	Tutorial 5: Reading and writing data
+- 14.00 – 14.30	[Tutorial 5: Reading and writing data](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial5)
 
 - 14.30 – 14.45	Lecture: Graphics in R
 
