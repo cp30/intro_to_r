@@ -1,0 +1,79 @@
+Optional Tutorial. Lists
+========================
+
+We have learned that R can read data in a number of classes. Data frames are a popular class of objects in R because it is very similar to spreadsheet. We also learned that we can use matrices and vectors.
+However, there are many other ways to store data in R. One of the most flexible is the class list.
+
+A list is similar to a vector, but the elements can have different classes. For example, a list can contain numbers, characters, and even data frames.
+
+Lets start by defining a list with the function list():
+
+```{r}
+my_list <- list()
+```
+
+We can use some functions that we learned previously to examine the contents of the list, its length, and its class:
+
+```{r}
+str(my_list)
+length(my_list)
+class(my_list)
+```
+
+We will add some numbers to the list, using indexing. In lists, indexing can be done with [[]], contrary to vectors, which use []:
+
+```{r}
+my_list[[1]] <- 1
+my_list[[2]] <- 2
+my_list[[3]] <- 3
+```
+
+We used three commands to add the three numbers, but it would be better to use a single command. Try adding a sequence of numbers to multiple elements of the list with a single command.
+
+```{r}
+my_list[[4:10]] <- 4:10
+```
+
+This produced an error. Try this instead:
+
+```{r}
+my_list[4:10] <- 4:10
+```
+
+Now lets inspect the list:
+
+```{r}
+my_list
+```
+
+Note that the display is different to that of vectors. We will see why this is convenient in the following steps:
+
+Our list has 10 elements. Create a data frame and add it to the 11th element of the list:
+
+```{r}
+my_data_frame <- data.frame(numbers = 1:10, letters=letters[1:10])
+my_list[[11]] <- my_data_frame
+```
+
+*Note that we used 'letters'. This is a variable in R that stores the letters of the alphabet. Try typing 'letters' at the prompt to see what it does.*
+
+Now lets inspect the data frame:
+
+```{r}
+str(my_list)
+length(my_list)
+class(my_list)
+summary(my_list)
+my_list
+
+```
+
+We can extract elements from the list by using [[]] indexing:
+
+```{r}
+my_list[[1]]
+my_list[[2]]
+my_list[[1]] + my_list[[2]]
+```
+
+**Individual exercise: try extracting the data frame that we appended to the list. Now try extracting the column named 'numbers' and multiply it by the first element of the list. You can do this by creating new variables, but try it using indexing of data frames and lists.** 
