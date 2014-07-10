@@ -1,9 +1,9 @@
 Introduction to R
 =================
 
-[Sebastian Duchene](sebastian.duchene@sydney.edu.au)
-[Molecular Ecology, Evolution and Phylogenetics Laboratory](http://sydney.edu.au/science/biology/meep/people/sebastianduchene.shtml)
-School of Biological Sciences
+[Sebastian Duchene](sebastian.duchene@sydney.edu.au)\n
+[Molecular Ecology, Evolution and Phylogenetics Laboratory](http://sydney.edu.au/science/biology/meep/people/sebastianduchene.shtml)\n
+School of Biological Sciences\n
 University of Sydney
 
 Genetics Society of Australasia conference 2014
