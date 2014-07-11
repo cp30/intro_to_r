@@ -86,7 +86,7 @@ variable4 <- "this is variable 4"
 class(variable4)
 ````
 
-Exercise
+Excercise
 ---------
 
 Make some numeric variables and try some mathematical operations. Try storing the result in other variables. For example:

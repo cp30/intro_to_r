@@ -134,7 +134,7 @@ class(variable4)
 ```
 
 
-Excercise
+Exercise
 ---------
 
 Make some numeric variables and try some mathematical operations. Try storing the result in other variables. For example:
