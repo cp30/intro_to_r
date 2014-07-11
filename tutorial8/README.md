@@ -36,7 +36,7 @@ str(cyst.data)
 
 The variables are defined as follows:
 
-	‘sex’ a numeric vector code, 0: male, 1:female.
+	‘sex’ a factor for "male" and "female".
 
 	‘height’ a numeric vector, height (cm).
 
