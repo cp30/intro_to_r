@@ -73,19 +73,20 @@ Programme
 
 - 14.15 – 14.30	[Lecture: Graphics in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture4.pdf)
 
-- 14.30 – 15.00	[Tutorial 6: Plotting data and graphical output](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial6)
+- 14.30 – 15.15	[Tutorial 6: Plotting data and graphical output](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial6)
 
   - [*Optional Tutorial: Custom graphics*](https://github.com/sebastianduchene/intro_to_r/tree/master/opt_tutorial_custom_plots)
 
-- 15.15 – 15.30	[Lecture: Statistical tests and linear models in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture5.pdf)
+- 15.15 - 15.30 *Tea break*
 
-- 15.30 – 16.00	[Tutorial 7: Statistical tests and linear models](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial7)
+- 15.30 – 15.45	[Lecture: Statistical tests and linear models in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture5.pdf)
 
-- 16.00 – 16.15	Solutions to exercises and questions
+- 15.45 – 16.15	[Tutorial 7: Statistical tests and linear models](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial7)
 
-- 16.15 – 16.45	[Tutorial 8: Tools for data analysis](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial8)
+- 16.15 – 16.30	Solutions to exercises and questions
 
-- 16.45 – 17.00	Concluding remarks and questions
+- 16.30 – 17.00	[Tutorial 8: Tools for data analysis](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial8)
+
 
 
 Useful references

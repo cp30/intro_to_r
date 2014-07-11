@@ -67,13 +67,13 @@ Programme
 
 - *Lunch break*
 
-- 13.30 – 14.00	[Lecture: Data in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture3.pdf)
+- 13.30 – 13.45	[Lecture: Data in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture3.pdf)
 
-- 14.00 – 14.30	[Tutorial 5: Reading and writing data](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial5)
+- 13.45 – 14.15	[Tutorial 5: Reading and writing data](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial5)
 
-- 14.30 – 14.45	[Lecture: Graphics in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture4.pdf)
+- 14.15 – 14.30	[Lecture: Graphics in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture4.pdf)
 
-- 14.45 – 15.15	[Tutorial 6: Plotting data and graphical output](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial6)
+- 14.30 – 15.00	[Tutorial 6: Plotting data and graphical output](https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial6)
 
   - [*Optional Tutorial: Custom graphics*](https://github.com/sebastianduchene/intro_to_r/tree/master/opt_tutorial_custom_plots)
 
