@@ -62,7 +62,7 @@ class(mymatrix1)
 In this case we have used the function matrix() to define the matrix. We have specified several *arguments* in the function. The first is the values in the matrix (data) , the second is the number of rows (nrow), and the third is the number of columns (ncol).
  Also notice that we specified some of these arguments with = (inside functions we use = instead of <-, which we use to specify variables). This is not always necessary. In some functions the arguments can be specified according to their default order.
  
- In the following example mymatrix2 is identical to mymatrix2:
+ In the following example mymatrix2 is identical to mymatrix1:
 
  ```{r}
  mymatrix2 <- matrix(1:9, 3, 3)
