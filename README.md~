@@ -1,7 +1,7 @@
 Introduction to R
 =================
 
-[Sebastian Duchene](sebastian.duchene@sydney.edu.au)  
+Sebastian Duchene  
 [Molecular Ecology, Evolution and Phylogenetics Laboratory](http://sydney.edu.au/science/biology/meep/people/sebastianduchene.shtml)  
 School of Biological Sciences  
 University of Sydney
