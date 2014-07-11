@@ -41,7 +41,7 @@ mymatrix1 <- matrix(1:9, 3, 3)
 mymatrix1 * 2
 mymatrix1 + 1
 ````
-**Individual exercise: create a vector and perform some basic operations. Now create an other vector and add them (note that the two vectors should have the same length, and in the case of matrices, they should have the same dimensions). Inspect the results and notice that the operations are conducted individually for every item using the indexing (for vector1 + vector2, vector1[1] is added to vector2[2])**
+**Individual exercise: create a vector and perform some basic operations. Now create an other vector and add them (note that the two vectors should have the same length, and in the case of matrices, they should have the same dimensions). Inspect the results and notice that the operations are conducted individually for every item using the indexing (for vector1 + vector2, vector1[1] is added to vector2[1])**
 
 
 Descriptive statistics
