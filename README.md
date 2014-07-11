@@ -77,7 +77,7 @@ Programme
 
   - [*Optional Tutorial: Custom graphics*](https://github.com/sebastianduchene/intro_to_r/tree/master/opt_tutorial_custom_plots)
 
-- 15.15 - 15.30 *Tea break*
+- *Tea break*
 
 - 15.30 – 15.45	[Lecture: Statistical tests and linear models in R](https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture5.pdf)
 
