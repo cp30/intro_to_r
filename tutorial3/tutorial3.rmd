@@ -55,7 +55,7 @@ class(iris)
 head(iris)
 ```
 
-The function data() is used to load the data sets available in the default R installation. the function head() prints the first six items of an object, in this case it is the first ten rows.
+The function data() is used to load the data sets available in the default R installation. the function head() prints the first six items of an object, in this case it is the first six rows.
 
 This data set consists of measurements of floral parts and the species.
 
