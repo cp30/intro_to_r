@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Tutorial 5 The Working directory and data in R</title>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Tutorial 5 The Working directory and data in R</h1>
+
+<h2>Setting the working directory</h2>
+
+<p>In the first part of this tutorial we will learn how to set the working directory and explore its contents in R.</p>
+
+<p>First create a folder with the name <em>r_workshop_data</em> in your desktop and save the data file for the workshop. This is a dataset of the distribution of Chytridomycosis in Australia. We will not use the complete data set for this workshop, but the all the files and meta data are available <a href="http://ecologicaldata.org/wiki/distribution-and-host-range-chytridiomycosis-australia">here</a>.</p>
+
+<p>To set the working directory you can use the <em>Misc</em> dropdown menu and <em>Change working directory</em> in Unix-like machines, or with <em>File</em> in Windows.
+An other option is to specify the path with the following command:</p>
+
+<pre><code>setwd(&quot;path/to/your/file&quot;)
+</code></pre>
+
+<p>Note that in Windows the paths are specified with backslash (), but R always uses the forward slash (/).</p>
+
+<p>Set the working directory to the <em>r_workshop_data</em> folder.</p>
+
+<p>We should make sure that we specified the working directory correctly. To get the working directory in R use the following command:</p>
+
+<pre><code class="r">getwd()
+</code></pre>
+
+<pre><code>## [1] &quot;/Users/sebastianducheneAIr/Dropbox/PostersTalks/R_workshop_GSA_2014/intro_to_r/tutorial5&quot;
+</code></pre>
+
+<p>Check the contents of the directory and make sure that it contains the data file.</p>
+
+<pre><code class="r">dir()
+</code></pre>
+
+<pre><code>##  [1] &quot;Chytridiomycosis_data_1956_2007.txt&quot;
+##  [2] &quot;Chytridomycosis_10.csv&quot;             
+##  [3] &quot;Chytridomycosis_10.xlsx&quot;            
+##  [4] &quot;Chytridomycosis_short.csv&quot;          
+##  [5] &quot;data_table_10.csv&quot;                  
+##  [6] &quot;data_table_10.txt&quot;                  
+##  [7] &quot;README.md&quot;                          
+##  [8] &quot;README.md~&quot;                         
+##  [9] &quot;sim_seqs.fasta&quot;                     
+## [10] &quot;sim_tree.tre&quot;                       
+## [11] &quot;tut5_seqs.fasta&quot;                    
+## [12] &quot;tut5_tree.tre&quot;                      
+## [13] &quot;tutorial5.rmd&quot;                      
+## [14] &quot;tutorial5.rmd~&quot;                     
+## [15] &quot;web_data.csv&quot;                       
+## [16] &quot;webtable.csv&quot;
+</code></pre>
+
+<h2>Reading and writing text data</h2>
+
+<p>From this point in the workshop we will use the data files that we saved in the <em>r_workshop_data</em> folder.</p>
+
+<p>Read the data as a text file with the command bellow.</p>
+
+<pre><code class="r">data_text &lt;- readLines(&quot;Chytridomycosis_short.csv&quot;)
+</code></pre>
+
+<p>This command reads the data as a vector, where each line in the file is an item in the vector. We will confirm the class of the object, and then determine its length with the length() function.</p>
+
+<pre><code class="r">class(data_text)
+</code></pre>
+
+<pre><code>## [1] &quot;character&quot;
+</code></pre>
+
+<pre><code class="r">length(data_text)
+</code></pre>
+
+<pre><code>## [1] 2500
+</code></pre>
+
+<p>Open the file in a text editor (I recommend <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a> or <a href="http://notepad-plus-plus.org/download/v6.5.html">NotePad++</a>, but any other is sufficient in this case).</p>
+
+<p>You can also open the file in Excel or any spreadsheet program, which should read it as a regular table of data.</p>
+
+<p><strong>Individual exercise: subset the vector to print on the screen the first ten items of data_text. You can use indexing as shown in tutorial 2.2. or search the help for the function head(). 
+After inspecting the first six lines, create a vector called <em>data_text_10</em> for these first ten items.
+As an optional exercise, print on the screen the last ten items of the data set. Hint: Remember the length() function that we used earlier</strong></p>
+
+<p>Your code for the exercise should look something like this:</p>
+
+<pre><code class="r">data_text_10 &lt;- data_text[1:10]
+</code></pre>
+
+<p>We will now save the first ten lines in a file with the function writeLines(). This function takes several arguments. Use the help file for more information on how to use the function. The basics are explained bellow:</p>
+
+<pre><code class="r">writeLines(text = data_text_10, con = &quot;Chytridomycosis_10.csv&quot;)
+# we could also use writeLines(data_text_10, &#39;Chytridomycosis_10.csv&#39;)
+</code></pre>
+
+<p>Check the <em>Chytridomycosis_10.csv</em> file in a text editor or spreadsheet program. The format should be identical to that of the original file. </p>
+
+<h2>Reading and writing tables</h2>
+
+<p>Reading data as text is only useful for text manipulations. For data analysis it is necessary to read the data like a spreadsheet and work with rows and columns. In R it is most convenient to have the data as data frames or matrices. To do this we can use the read.table() function.</p>
+
+<p>Open the help file for the read.table function. It has many possible arguments with default values. In some cases it is not necessary to change the defaults, but sometimes this can cause problems, so it is useful to become familiar with this function. </p>
+
+<p>Load the data file with the following command:</p>
+
+<pre><code class="r">data_table &lt;- read.table(file = &quot;Chytridomycosis_short.csv&quot;, sep = &quot;,&quot;, head = T)
+</code></pre>
+
+<p>We specified sep=&ldquo;,&rdquo; because the default is tab delimited text, and we want R to use the commas to separate the values. Note that this is similar to using the function read.csv(), as shown in the help file for read.table().</p>
+
+<p>The argument head = T is used to specify that the first row of the file is the names of the columns, which is useful if we want to treat our data like a data.frame object.</p>
+
+<p>It is very important to make sure that the data are read correctly. A very useful function is str(), which prints the structure of objects in R:</p>
+
+<pre><code class="r">str(data_table)
+</code></pre>
+
+<pre><code>## &#39;data.frame&#39;:    2499 obs. of  18 variables:
+##  $ Compiled_by     : Factor w/ 1 level &quot;RichardRetallick&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Database_ID     : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Species         : Factor w/ 66 levels &quot;Adelotus brevis&quot;,..: 59 59 59 59 59 59 59 59 59 59 ...
+##  $ Sex             : Factor w/ 8 levels &quot;Female&quot;,&quot;Female ?&quot;,..: 6 6 6 6 6 6 6 3 3 1 ...
+##  $ Site            : Factor w/ 224 levels &quot;1km east of Bogong Swamp, Kosciusko NP&quot;,..: 14 14 14 14 14 14 14 28 28 28 ...
+##  $ State           : Factor w/ 8 levels &quot;ACT&quot;,&quot;missing data&quot;,..: 1 1 1 1 1 1 1 3 3 3 ...
+##  $ Country         : Factor w/ 1 level &quot;Australia&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Year            : int  1997 1997 1997 1997 1997 1997 1997 1997 1997 1997 ...
+##  $ Diagnostic      : Factor w/ 1 level &quot;Histology&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Individuals     : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ Indivs_positive : int  0 0 0 0 0 0 0 0 0 0 ...
+##  $ Collector_source: Factor w/ 38 levels &quot;A. Beezley / P. Couper&quot;,..: 8 8 8 8 8 8 8 8 8 8 ...
+##  $ Orig_database   : Factor w/ 5 levels &quot;D. Mendez&quot;,&quot;D. Mendez / R. Speare&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Disease_status  : Factor w/ 3 levels &quot;negative&quot;,&quot;no result&quot;,..: 1 1 1 1 2 2 2 1 1 1 ...
+##  $ Accuracy        : Factor w/ 2 levels &quot;acceptable&quot;,&quot;unacceptable&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ Latitude        : num  -35.6 -35.6 -35.6 -35.6 -35.6 ...
+##  $ Longitude       : num  149 149 149 149 149 ...
+##  $ Dead_or_sick    : Factor w/ 2 levels &quot;not noted&quot;,&quot;noted&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+</code></pre>
+
+<p>As we can see, the data were read as a data.frame object, so we can use the indexing and column names like we did in tutorial 2.</p>
+
+<p>We can also inspect the first six rows of the table:</p>
+
+<pre><code class="r">head(data_table)
+</code></pre>
+
+<pre><code>##        Compiled_by Database_ID                 Species          Sex
+## 1 RichardRetallick           1 Pseudophryne pengilleyi not recorded
+## 2 RichardRetallick           2 Pseudophryne pengilleyi not recorded
+## 3 RichardRetallick           3 Pseudophryne pengilleyi not recorded
+## 4 RichardRetallick           4 Pseudophryne pengilleyi not recorded
+## 5 RichardRetallick           5 Pseudophryne pengilleyi not recorded
+## 6 RichardRetallick           6 Pseudophryne pengilleyi not recorded
+##                Site State   Country Year Diagnostic Individuals
+## 1 Black Fellows Gap   ACT Australia 1997  Histology           1
+## 2 Black Fellows Gap   ACT Australia 1997  Histology           1
+## 3 Black Fellows Gap   ACT Australia 1997  Histology           1
+## 4 Black Fellows Gap   ACT Australia 1997  Histology           1
+## 5 Black Fellows Gap   ACT Australia 1997  Histology           1
+## 6 Black Fellows Gap   ACT Australia 1997  Histology           1
+##   Indivs_positive Collector_source Orig_database Disease_status   Accuracy
+## 1               0        D. Hunter     D. Mendez       negative acceptable
+## 2               0        D. Hunter     D. Mendez       negative acceptable
+## 3               0        D. Hunter     D. Mendez       negative acceptable
+## 4               0        D. Hunter     D. Mendez       negative acceptable
+## 5               0        D. Hunter     D. Mendez      no result acceptable
+## 6               0        D. Hunter     D. Mendez      no result acceptable
+##   Latitude Longitude Dead_or_sick
+## 1    -35.6     148.8    not noted
+## 2    -35.6     148.8    not noted
+## 3    -35.6     148.8    not noted
+## 4    -35.6     148.8    not noted
+## 5    -35.6     148.8    not noted
+## 6    -35.6     148.8    not noted
+</code></pre>
+
+<p>To find the number of rows and columns we can use the following commands:</p>
+
+<pre><code class="r">dim(data_table)  # Prints the number of rows, followed by the number of columns.
+</code></pre>
+
+<pre><code>## [1] 2499   18
+</code></pre>
+
+<pre><code class="r">nrow(data_table)  # Prints the number of rows only.
+</code></pre>
+
+<pre><code>## [1] 2499
+</code></pre>
+
+<pre><code class="r">ncol(data_table)  # Prints the number of columns only.
+</code></pre>
+
+<pre><code>## [1] 18
+</code></pre>
+
+<p><strong>Individual exercise: Obtain some summary statistics from the columns in data_table. Try using the summary() function on the complete data frame and on one column each time</strong></p>
+
+<p>We can write tables in many formats from R. The most simple method is to save the data as tab delimited or comma separated values, instead of xlsx or other data formats (these require some additional R packages).</p>
+
+<p>We will save the first ten lines of data_table in csv and txt (tab delimited text) by indexing the first ten rows. Open the help file for write.table() for more details on the arguments of the function.</p>
+
+<pre><code class="r">write.table(x = data_table[1:10, ], file = &quot;data_table_10.csv&quot;, sep = &quot;,&quot;, row.names = F)
+write.table(x = data_table[1:10, ], file = &quot;data_table_10.txt&quot;, sep = &quot;\t&quot;, 
+    row.names = F)
+</code></pre>
+
+<p><strong>Individual exercises: We used the argument row.names = F, try using T (the default) and look at the output files. 
+Change argument for the col.names and look at the output files</strong></p>
+
+<p><strong>Class exercise: Use the order function to sort the rows of data_table from the latest to the most recent year of collection of the sample. Write this table into a file called data_table_sorted.csv</strong></p>
+
+<p><strong>Class exercise: Use the operation ==  to obtain a data frame only with samples from the year 1998. Save this to a file called data_table_1998.csv</strong></p>
+
+<h2>Data from Excel</h2>
+
+<p>R can read data from Excel and other spreadsheet programs. We need to download and install additional tools for this purpose. 
+In this example we will use the package gdata. Download and install it with this command:</p>
+
+<pre><code class="r">install.packages(&quot;gdata&quot;)
+</code></pre>
+
+<pre><code>## 
+## The downloaded binary packages are in
+##  /var/folders/17/lpg5qqgx4237271yxywq5_m40000gn/T//RtmpE7WzKz/downloaded_packages
+</code></pre>
+
+<p>We need to load the package to make the functions available. Use the library() function:</p>
+
+<pre><code class="r">library(gdata)
+</code></pre>
+
+<p>The data file &#39;Chytridomycosis_10.xlsx&#39; is the same data that we used in a previous example, but it is in Excel format. We can read it as follows:</p>
+
+<pre><code class="r">data_excel &lt;- read.xls(&quot;Chytridomycosis_10.xlsx&quot;, sheet = 1)
+</code></pre>
+
+<p>Note that we use the argument sheet = 1 to specify that it should load the first sheet. </p>
+
+<p>An other package that can handle spreadsheets is <a href="http://www.r-bloggers.com/xlconnect-0-2-0/">XLConnect</a>. It is more diffult to use, but it has some more advanced functions.</p>
+
+<h2>Optional exercise: Reading data from the internet</h2>
+
+<p>R has many capabilities to handle data, including maps, phylogenetic trees, and other more complicated structures. We have loaded data from our local machine, but it is also possible to obtain data from the internet, such as a file in Dropbox or a remote server. We will try this by downloading some data from the github repository for the workshop.</p>
+
+<p>Open a web browser and type in the following address:</p>
+
+<pre><code>https://github.com/sebastianduchene/intro_to_r/blob/master/tutorial5/Chytridomycosis_short.csv
+</code></pre>
+
+<p>You will note that this is one of the data sets that we have been using. It is stored in a remote server in GitHub. Click the link labeled &#39;Raw&#39; to view the raw data in your browser. The address should be something like this:</p>
+
+<pre><code>https://raw.githubusercontent.com/sebastianduchene/intro_to_r/master/tutorial5/Chytridomycosis_short.csv
+</code></pre>
+
+<p>This is the URL for the raw data. We can read it directly into R with the following code. If you are using a windows machine you may not need to use the method=curl argument. The argument &#39;destfile&#39; is used to specify the name of the file that we have downloaded. </p>
+
+<pre><code class="r">download.file(&quot;https://raw.githubusercontent.com/sebastianduchene/intro_to_r/master/tutorial5/Chytridomycosis_short.csv&quot;, 
+    method = &quot;curl&quot;, destfile = &quot;web_data.csv&quot;)
+</code></pre>
+
+<p>Check the working directory to see that the web_data.csv file was created. You can do this from R using the dir() function:</p>
+
+<pre><code class="r">dir()
+</code></pre>
+
+<pre><code>##  [1] &quot;Chytridiomycosis_data_1956_2007.txt&quot;
+##  [2] &quot;Chytridomycosis_10.csv&quot;             
+##  [3] &quot;Chytridomycosis_10.xlsx&quot;            
+##  [4] &quot;Chytridomycosis_short.csv&quot;          
+##  [5] &quot;data_table_10.csv&quot;                  
+##  [6] &quot;data_table_10.txt&quot;                  
+##  [7] &quot;README.md&quot;                          
+##  [8] &quot;README.md~&quot;                         
+##  [9] &quot;sim_seqs.fasta&quot;                     
+## [10] &quot;sim_tree.tre&quot;                       
+## [11] &quot;tut5_seqs.fasta&quot;                    
+## [12] &quot;tut5_tree.tre&quot;                      
+## [13] &quot;tutorial5.rmd&quot;                      
+## [14] &quot;tutorial5.rmd~&quot;                     
+## [15] &quot;web_data.csv&quot;                       
+## [16] &quot;webtable.csv&quot;
+</code></pre>
+
+<p>We can use this file for any analyses like we did in the previous example. </p>
+
+<h2>Optional exercise: Reading sequence data and phylogenetic trees</h2>
+
+<p>R can handle many specific applications. The code for these applications is not included in standard R distributions, but it can be loaded by installing packages. In this example we will read a sequence in fasta format and a phylogenetic tree. This can be done with the APE package. </p>
+
+<p>Install it using the following command:</p>
+
+<pre><code>install.packages(&quot;ape&quot;)
+</code></pre>
+
+<p>R may prompt you to select a mirror. This is a remote server where the code and data are stored. Select one that is geographically close to you. To make the functions available, load the package with the library function:</p>
+
+<pre><code class="r">library(ape)
+</code></pre>
+
+<p>Download the phylogenetic tree and the fasta file from the web:</p>
+
+<pre><code class="r">download.file(&quot;https://raw.githubusercontent.com/sebastianduchene/intro_to_r/master/tutorial5/sim_seqs.fasta&quot;, 
+    method = &quot;curl&quot;, destfile = &quot;tut5_seqs.fasta&quot;)
+download.file(&quot;https://raw.githubusercontent.com/sebastianduchene/intro_to_r/master/tutorial5/sim_tree.tre&quot;, 
+    method = &quot;curl&quot;, destfile = &quot;tut5_tree.tre&quot;)
+</code></pre>
+
+<p>Use the functions read.dna, and read.tree from APE to read the data:</p>
+
+<pre><code class="r">my_tree &lt;- read.tree(&quot;tut5_tree.tre&quot;)
+my_seqs &lt;- read.dna(&quot;tut5_seqs.fasta&quot;, format = &quot;fasta&quot;)
+</code></pre>
+
+<p>Use summary, str, and class to inspect these data. Try the following code:</p>
+
+<pre><code>plot(my_tree)
+</code></pre>
+
+<p>In the next section of the workshop we will learn more about plotting.</p>
+
+</body>
+
+</html>
