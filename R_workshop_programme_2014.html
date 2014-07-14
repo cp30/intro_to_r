@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Introduction to R</title>
+
+
+
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<h1>Introduction to R</h1>
+
+<p>Sebastian Duchene<br/>
+<a href="http://sydney.edu.au/science/biology/meep/people/sebastianduchene.shtml">Molecular Ecology, Evolution and Phylogenetics Laboratory</a><br/>
+School of Biological Sciences<br/>
+University of Sydney</p>
+
+<p><a href="http://www.genetics.org.au/annual-meeting-2014/workshops/">Genetics Society of Australasia Conference 2014</a></p>
+
+<p>Friday 11 July, 2014</p>
+
+<h2>Overview</h2>
+
+<p>R is a powerful programming language for data analysis, with a wide array of applications available for biological sciences. In this workshop we will cover the fundamentals of scientific computing in R. We will start with some basic programming and data exploration, building up to more advanced tools for data visualisation and basic statistical analysis. The workshop assumes no prior programming experience, and the material is applicable across any discipline. The attendees will gain enough knowledge to apply specific tools for their own research.</p>
+
+<p>The workshop will be held in a computing lab in the Charles Perkins Centre at the University of Sydney. It will be run by Sebastian Duchene (<a href="mailto:sebastian.duchene@sydney.edu.au">sebastian.duchene@sydney.edu.au</a>), with assistance from A/Prof Simon Ho (<a href="mailto:simon.ho@sydney.edu.au">simon.ho@sydney.edu.au</a>) and Frank Jia (<a href="mailto:fangzhi.jia@sydney.edu.au">fangzhi.jia@sydney.edu.au</a>). The workshop will involve a series of lectures and tutorials. The tutorials will involve basic analyses and data manipulation using desktop PCs. We will be using free software that can be installed on PC, Mac, and UNIX platforms. </p>
+
+<h2>Required software</h2>
+
+<ul>
+<li><p><a href="http://www.r-project.org">R</a></p></li>
+<li><p><a href="www.rstudio.com">RStudio</a></p></li>
+</ul>
+
+<h2>Optional software</h2>
+
+<ul>
+<li><p><a href="http://www.barebones.com/products/textwrangler/download.html">TextWrangler</a> for MacOSX.</p></li>
+<li><p><a href="http://notepad-plus-plus.org">Notepad++</a> for Windows.</p></li>
+<li><p><a href="http://ess.r-project.org/index.php?Section=download">Emacs Speaks Statistics</a> for any platform.</p></li>
+</ul>
+
+<h2>Programme</h2>
+
+<ul>
+<li><p>09.00 – 09.15   Arrival and set-up</p></li>
+<li><p>09.15 – 09.30   <a href="https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture1.pdf">Lecture: Introduction to scientific computing and R</a></p></li>
+<li><p>09.30 – 09.45   Tutorial 0: Setting up R on different operating systems</p></li>
+<li><p>09.45 – 10.00   <a href="https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture2.pdf">Lecture: Syntax and objects</a></p></li>
+<li><p>10.00 – 10.30   <a href="https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial1">Tutorial 1: Syntax and object types</a></p></li>
+<li><p>10.30 – 11.00   <a href="https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial2">Tutorial 2. Vectors, matrices, data frames, and indexing</a></p>
+
+<ul>
+<li><a href="https://github.com/sebastianduchene/intro_to_r/tree/master/opt_tutorial_lists"><em>Optional Tutorial: Lists</em></a></li>
+</ul></li>
+<li><p><em>Tea break</em></p></li>
+<li><p>11.15 – 12.00   <a href="https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial3">Tutorial 3: Numeric and string operations</a></p></li>
+<li><p>12.00 – 12.15   <a href="https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial4">Tutorial 4: Help in R</a></p></li>
+<li><p>12.15 - 12.30 Solutions to exercises and questions</p></li>
+<li><p><em>Lunch break</em></p></li>
+<li><p>13.30 – 13.45   <a href="https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture3.pdf">Lecture: Data in R</a></p></li>
+<li><p>13.45 – 14.15   <a href="https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial5">Tutorial 5: Reading and writing data</a></p></li>
+<li><p>14.15 – 14.30   <a href="https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture4.pdf">Lecture: Graphics in R</a></p></li>
+<li><p>14.30 – 15.15   <a href="https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial6">Tutorial 6: Plotting data and graphical output</a></p>
+
+<ul>
+<li><a href="https://github.com/sebastianduchene/intro_to_r/tree/master/opt_tutorial_custom_plots"><em>Optional Tutorial: Custom graphics</em></a></li>
+</ul></li>
+<li><p><em>Tea break</em></p></li>
+<li><p>15.30 – 15.45   <a href="https://github.com/sebastianduchene/intro_to_r/raw/master/lectures/lecture5.pdf">Lecture: Statistical tests and linear models in R</a></p></li>
+<li><p>15.45 – 16.15   <a href="https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial7">Tutorial 7: Statistical tests and linear models</a></p></li>
+<li><p>16.15 – 16.30   Solutions to exercises and questions</p></li>
+<li><p>16.30 – 17.00   <a href="https://github.com/sebastianduchene/intro_to_r/tree/master/tutorial8">Tutorial 8: Tools for data analysis</a></p></li>
+</ul>
+
+<h2>Useful references</h2>
+
+<h2>General textbooks and references for learning R</h2>
+
+<p>simpler – Using R for introductory statistics 
+Verzani (2002) CRC Press.</p>
+
+<p>The R Book
+Crawley, M. J. (2012). The R book. John Wiley &amp; Sons.</p>
+
+<h2>Online resources</h2>
+
+<ul>
+<li><p><a href="www.r-tutor.com">r-tutor</a></p></li>
+<li><p><a href="www.statmethods.net">statmethods</a></p></li>
+<li><p><a href="www.bioconductor.org">bioconductor</a></p></li>
+<li><p><a href="https://github.com/ropensci/rentrez">Rentrez</a>. This is a great package to access internet data bases, such as NCBI.</p></li>
+<li><p><a href="http://www.bioconductor.org/help/workflows/high-throughput-sequencing/">Sequence data in R</a>. This is a tutorial and some resources to process FASTQ files and NGS output data.</p></li>
+</ul>
+
+<h2>Online forums</h2>
+
+<p>There are many good forums to find answers for specific R applications. I recommend the following for statistics and programming:</p>
+
+<ul>
+<li><p><a href="http://stackoverflow.com/questions/tagged/r">stack overflow</a></p></li>
+<li><p><a href="http://stats.stackexchange.com/questions/138/resources-for-learning-r">cross validated</a></p></li>
+</ul>
+
+</body>
+
+</html>
